@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicRenderC.cs" />
+    <Compile Include="BasicRender\BasicRenderGraphic.cs" />
+    <Compile Include="BasicRender\Render.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

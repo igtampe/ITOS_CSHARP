@@ -1,16 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace ITOS_CSHARP{
+namespace BasicRender{
     /// <summary></summary>
-    public class BasicRenderC {
+    public class Render {
 
         //===============================================================
         //                  BASIC RENDER C#, VERSION 1.0
@@ -240,31 +234,16 @@ namespace ITOS_CSHARP{
 
         }
 
-        public static void DrawFromFile(String Filename, int LeftPos, int TopPos) {
+        /// <summary>displays text at the currentline, without a linebreak. <br></br>WILL LINEBREAK IF ONLY '.' IS SPECIFIED</summary>
+        /// <param name="text"></param>
+        public static void Echo(String text) { Echo(text, false); }
 
-            if (!File.Exists(Filename)) {
-                Sprite("[ ERROR ]", ConsoleColor.Red, ConsoleColor.Black);
-                Sprite(" File " + Filename + " was not found.", ConsoleColor.Black, ConsoleColor.Red);
-                return;
-            }
-            foreach (String Line in File.ReadAllLines(Filename)){ Draw(Line); }
-
-        }
-
-        /// <summary>Draws a graphic from an HF File </summary>
-        /// <param name="Filename"></param>
-        /// <param name="LeftPos"></param>
-        /// <param name="TopPos"></param>
-        public static void HiColorDrawFromFile(String Filename, int LeftPos, int TopPos) {
-
-            if (!File.Exists(Filename)){
-                Sprite("[ ERROR ]", ConsoleColor.Red, ConsoleColor.Black);
-                Sprite(" File " + Filename + " was not found.", ConsoleColor.Black, ConsoleColor.Red);
-                return;
-            }
-
-            foreach (String Line in File.ReadAllLines(Filename)) { HiColorDraw(Line); }
-
+        /// <summary>displays text at the currentline, possibly with a linebreak if specified. <br></br>WILL LINEBREAK IF ONLY '.' IS SPECIFIED</summary>
+        /// <param name="text"></param>
+        /// <param name="Linebreak"></param>
+        public static void Echo(String text, Boolean Linebreak) {
+            if (text == ".") { Echo("", true); return; }
+            if (Linebreak) { Console.WriteLine(text); } else { Console.Write(text); }
         }
 
         /// <summary>Sets the cursor position to the specified one</summary>
@@ -281,21 +260,5 @@ namespace ITOS_CSHARP{
         /// <param name="FG"></param>
         public static void Color(ConsoleColor BG, ConsoleColor FG) { Console.BackgroundColor = BG; Console.ForegroundColor = FG; }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
-
-
-
 }

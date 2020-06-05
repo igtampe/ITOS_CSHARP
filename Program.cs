@@ -10,7 +10,7 @@ namespace ITOS_CSHARP {
         
         public static void Main(string[] args)  {
 
-            BasicRenderGraphic Clouds = new BasicGraphicFromFile("Cloudy.df");
+            BasicRenderGraphic Clouds = new Cloud();
             Clouds.draw(1, 1);
 
             Render.Pause();

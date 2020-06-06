@@ -26,7 +26,6 @@ namespace BasicRender{
 
         public const ConsoleColor WindowBG = ConsoleColor.Black;
         public const ConsoleColor WindowFG = ConsoleColor.White;
-        public const ConsoleColor WindowClearColor = ConsoleColor.Black;
 
         /// <summary>Renders a sprite at the current cursor position</summary>
         /// <param name="sprite"></param>
@@ -67,7 +66,7 @@ namespace BasicRender{
         /// <param name="Height"></param>
         /// <param name="LeftPos"></param>
         /// <param name="TopPos"></param>
-        public static void Box(ConsoleColor Color, int Length, int Height, int LeftPos, int TopPos) { for (int i = 0; i < Height; i++) { Row(Color, Length, LeftPos, TopPos + Height); } }
+        public static void Box(ConsoleColor Color, int Length, int Height, int LeftPos, int TopPos) { for (int i = 0; i < Height; i++) { Row(Color, Length, LeftPos, TopPos + i); } }
 
         /// <summary>Draws a row of blocks of the specified color of specified length at the current cursor position</summary>
         /// <param name="RowColor"></param>
@@ -95,7 +94,7 @@ namespace BasicRender{
 
         /// <summary>Clears the specified line using the configured WindowClearColor</summary>
         /// <param name="TopPos"></param>
-        public static void ClearLine(int TopPos) { Row(WindowClearColor, Console.WindowWidth - 1, 0, TopPos); }
+        public static void ClearLine(int TopPos) { Row(Console.BackgroundColor, Console.WindowWidth - 1, 0, TopPos); }
 
         /// <summary>Draws text centered on the screen at the current row, and with curent colors</summary>
         /// <param name="Text"></param>

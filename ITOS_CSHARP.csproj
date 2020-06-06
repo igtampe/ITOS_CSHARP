@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="BasicRender\BasicRenderGraphic.cs" />
     <Compile Include="BasicRender\Render.cs" />
+    <Compile Include="BasicWindows\Window.cs" />
+    <Compile Include="BasicWindows\WindowElement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,8 +7,19 @@ namespace ITOS_CSHARP {
         
         public static void Main(string[] args)  {
 
-            Render.Color(ConsoleColor.DarkCyan,ConsoleColor.Black);
+
+            Console.Title="ITOS EMULATOR [Verison 4.0]";
+            Console.BackgroundColor=ConsoleColor.Black;
+            Console.ForegroundColor=ConsoleColor.White;
+
             Console.Clear();
+
+
+
+            Console.Clear();
+
+
+
 
             Window Hello = new HelloWorldWindow();
             Hello.Execute();

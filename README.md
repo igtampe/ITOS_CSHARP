@@ -1,4 +1,6 @@
 # ITOS_CSHARP
+<b>Hey an important thing BasicRender now has its own page as a class library. This project is outdated</b>
+
 A project I'm working on mostly to learn and practice some of the basics of C#. ITOS is a long running demo-esque thing that I've been coding since my days in Batch. This is the 4th rewrite, which like the other ones will probably not reach full completion. However, it doesn't need to. It's always been about the demo part, mostly.
 
 ITOS is a fake operating system, but it does let me show off some of the things I can do under the programming languages I know. There were two versions in batch, one that would "crash" after logging in, and one that was more functional, allowing the user to launch a few "programs". It's probably the most functional out of the four versions.
